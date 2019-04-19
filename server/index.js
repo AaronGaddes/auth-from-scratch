@@ -3,7 +3,10 @@ const volleyball = require('volleyball');
 
 const app = express();
 
-const auth = require('./auth/index.js');
+// const auth = require('./auth/index.js');
+// const auth = require('./auth/index');
+const auth = require('./auth');
+
 
 app.use(volleyball);
 
@@ -23,9 +26,9 @@ function notFound(req, res, next) {
     next(error);
 }
 
-function errorHandler(err, req, next) {
+function errorHandler(err, req, res, next) {
     res.status(res.statusCode || 500);
-    res.jsonn({
+    res.json({
         message: err.message,
         stack: err.stack
     });

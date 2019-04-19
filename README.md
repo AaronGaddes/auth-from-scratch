@@ -8,10 +8,10 @@ Based off of the tutorial from Coding Garden: https://youtu.be/JNAjjHwPFIw
 * [x] Create Server
 * [x] Add auth router
 * [x] Create user with POST /auth/signup
-	* [ ] validate required fields
-	* [ ] Check if username is unique
-	* [ ] hash password with bcrypt
-	* [ ] insert into db
+	* [x] validate required fields
+	* [x] Check if username is unique
+	* [x] hash password with bcrypt
+	* [x] insert into db
 * [ ] Create Landing Page
 	* [ ] Link to Sign Up Page
 * [ ] Create Sign Up Page
