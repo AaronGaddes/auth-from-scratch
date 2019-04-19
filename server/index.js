@@ -1,6 +1,5 @@
 const express = require('express');
 const volleyball = require('volleyball');
-const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -8,7 +7,7 @@ const auth = require('./auth/index.js');
 
 app.use(volleyball);
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.get('/', (req,res) => {
     res.json({
