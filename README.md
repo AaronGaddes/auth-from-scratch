@@ -12,19 +12,19 @@ Based off of the tutorial from Coding Garden: https://youtu.be/JNAjjHwPFIw
 	* [x] Check if username is unique
 	* [x] hash password with bcrypt
 	* [x] insert into db
-* [ ] Create Landing Page
-	* [ ] Link to Sign Up Page
-* [ ] Create Sign Up Page
-	* [ ] Form with: username and password
-	* [ ] When form is submitted
-		* [ ] Validate username
-			* [ ] Display errors
-		* [ ] Validate password
-			* [ ] Display errors
-		* [ ] POST request to server
-			* [ ] Display errors
-			* [ ] If succesful sign up
-				* [ ] Redirect to login page
+* [x] Create Landing Page
+	* [x] Link to Sign Up Page
+* [x] Create Sign Up Page
+	* [x] Form with: username and password
+	* [x] When form is submitted
+		* [x] Validate username
+			* [x] Display errors
+		* [x] Validate password
+			* [x] Display errors
+		* [x] POST request to server
+			* [x] Display errors
+			* [x] If succesful sign up
+				* [x] Redirect to login page
 * [ ] Login user with POST /auth/login
 	* [ ] validate the user
 	* [ ] check if username in db

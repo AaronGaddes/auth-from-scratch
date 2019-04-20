@@ -32,10 +32,11 @@ router.post('/signup', (req, res, next) =>{
             if(existingUser) {
                 // already a user  with username
                 const err = new Error(`A user with username "${user.username}" already exists. Please choose another one.`)
+                res.status(409);
                 next(err);
             } else {
                 // hash password
-                bcrypt.hash(user.password,12).then(hashedPassword => {
+                bcrypt.hash(user.password.trim(),12).then(hashedPassword => {
                     const newUser = {
                         username: user.username,
                         password: hashedPassword
@@ -50,6 +51,7 @@ router.post('/signup', (req, res, next) =>{
             }
         })
     } else {
+        res.status(422);
         next(result.error);
     }
 });
