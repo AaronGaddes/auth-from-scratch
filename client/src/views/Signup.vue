@@ -112,9 +112,10 @@
                         return response.json().then(error=>{
                             throw new Error(error.message);
                         });
-                    }).then(() => {
+                    }).then((result) => {
                         this.signingUp = false;
-                        this.$router.push('/login');
+                        localStorage.setItem('token',result.token);
+                        this.$router.push('/dashboard');
                     }).catch(error => {
                         this.signingUp = false;
                         console.error(error);
