@@ -105,7 +105,6 @@
                             'Content-Type': 'application/json'
                         }
                     }).then(response => {
-                        this.signingUp = false;
                         if(response.ok) {
                             return response.json();
                         }
@@ -114,8 +113,10 @@
                             throw new Error(error.message);
                         });
                     }).then(() => {
+                        this.signingUp = false;
                         this.$router.push('/login');
                     }).catch(error => {
+                        this.signingUp = false;
                         console.error(error);
                         this.errorMessage = error.message;
                     });
@@ -135,7 +136,7 @@
                     if (result.error.message.includes('username')) {
                         this.errorMessage = 'Invalid Username'
                     }
-                    if (result.error.message.includes('password')) {
+                    if (result.error.message.includes('Password')) {
                         this.errorMessage = 'Invalid Password'
                     }
                     return false;
