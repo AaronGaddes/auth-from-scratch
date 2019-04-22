@@ -95,7 +95,7 @@ router.post('/login', (req, res, next) => {
                     if (result) {
                         // correct information
                         // generate JWT
-                        createTokenSendResponse(user, res, next);
+                        createTokenSendResponse(existingUser, res, next);
                     } else {
                         respondError422(res, next)
                     }

@@ -101,12 +101,10 @@ export default {
                     });
                 }).then((result) => {
                     this.loggingIn = false;
-                    console.log(result);
                     localStorage.setItem('token',result.token);
                     this.$router.push('/dashboard');
                 }).catch(error => {
                     this.loggingIn = false;
-                    console.error(error);
                     this.errorMessage = error.message;
                 });
             }
